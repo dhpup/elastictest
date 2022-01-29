@@ -1,5 +1,5 @@
 FROM bash:4.4
 
-COPY test.sh /
+COPY test.sh
 
-CMD ["bash", "/test.sh"]
+ENTRYPOINT [ "bash", "test.sh" ]
