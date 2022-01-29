@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file Dockerfile --tag dhpup/elastictest:latest
       
     - name: Docker Push
-      run: docker push dhpup/elastictest
+      run: docker push dhpup/elastictest:latest
