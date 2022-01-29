@@ -1,4 +1,5 @@
-FROM golang:1.16
-WORKDIR /app
-COPY . .
-CMD ["sh", "test.sh"]
+FROM bash:4.4
+
+COPY test.sh /
+
+CMD ["bash", "/test.sh"]
