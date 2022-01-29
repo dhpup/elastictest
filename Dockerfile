@@ -1,7 +1,6 @@
 FROM bash:4.4
-RUN apt-get update
-RUN apt-get install curl
-RUN apt-get install jq
+RUN apk add --no-cache jq
+RUN apk add --no-cache curl
 COPY test.sh /
 
 # ENTRYPOINT [ "bash", "/test.sh" ]
