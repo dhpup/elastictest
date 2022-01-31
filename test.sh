@@ -13,8 +13,4 @@ value=$(curl -XGET "https://dhpup-eck.es.us-west-1.aws.found.io:9243/apm-7.16.3-
 
 echo $value
 
-if [ echo "$value > 220" | bc ]; then
-    exit 1
-else
-    exit 0
-fi
+echo "$value > 220" | bc
