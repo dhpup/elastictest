@@ -11,4 +11,6 @@ value=$(curl -XGET "https://dhpup-eck.es.us-west-1.aws.found.io:9243/apm-7.16.3-
   }
 }' | jq '.aggregations.review_average[]')
 
-echo "$value > 200" | bc
+echo $value
+
+echo "$value > 220" | bc
