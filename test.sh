@@ -25,9 +25,7 @@ echo $value
 
 if [ $value -gt 220 ]
 then
-  echo "Verification Failed"
   exit 0
 else
-  echo "Verification Succeeded"
   exit 1
 fi
