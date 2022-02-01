@@ -1,4 +1,6 @@
 #!/bin/bash
+declare -i value
+
 value=$(curl -XGET "https://dhpup-eck.es.us-west-1.aws.found.io:9243/apm-7.16.3-transaction/_search" --header 'Authorization: ApiKey MGFKam9uNEJCWFhBTnc0WUZDRms6c0Z3cnRQTGdTbWl1LWltQ2RvM01xUQ==' -H 'Content-Type: application/json' -d'
 {
   "size": 0,
@@ -21,4 +23,11 @@ value=$(curl -XGET "https://dhpup-eck.es.us-west-1.aws.found.io:9243/apm-7.16.3-
 
 echo $value
 
-echo "$value > 220" | bc
+if [ $value -gt 220 ]
+then
+  echo "Verification Failed"
+  exit 0
+else
+  echo "Verification Succeeded"
+  exit 1
+fi
