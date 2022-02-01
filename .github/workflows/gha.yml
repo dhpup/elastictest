@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dhpup/elastictest:1.1.5
+      run: docker build . --file Dockerfile --tag dhpup/elastictest:1.1.6
       
     - name: Docker Push
-      run: docker push dhpup/elastictest:1.1.5
+      run: docker push dhpup/elastictest:1.1.6
